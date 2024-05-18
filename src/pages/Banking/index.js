@@ -10,13 +10,13 @@ import { ArrowDownOutlined, MehOutlined, RetweetOutlined } from '@ant-design/ico
 const data = [{
   id: 1,
   name: 'Ngân Hàng Sacombank',
-  image: `/image/qrSacombank.jpg`,
+  image: `/image/qrSacomBank.jpg`,
   stk: `060251437400`
 },
 {
   id: 2,
   name: 'Ngân Hàng Vietinbank',
-  image: `/image/qrVietinbank.jpg`,
+  image: `/image/qrVietinBank.jpg`,
   stk: `0379903378`
 },
 {
@@ -36,7 +36,7 @@ data.map(item => {
       key: item.id,
       label: item.name,
       children: <div className='box__imgBK'>
-        <img src={item.image} />
+        <img src={item.image} alt={item.name} />
         <div>
           <ButtonDowload img={item.image}></ButtonDowload>
           <RetweetOutlined style={{ padding: "0 2px" }} />
