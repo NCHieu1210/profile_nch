@@ -1,0 +1,62 @@
+@import "../../variable";
+
+.header {
+  @include display-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 222px;
+
+  @media (max-width: $tablet-width) {
+    top: 135px;
+  }
+
+
+  &__avatar {
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+    @media (max-width: $tablet-width) {
+      padding: 10px;
+      width: 180px;
+
+      >div {
+        width: 160px !important;
+      }
+    }
+
+
+    img {
+      border-radius: 50%;
+
+      @media (max-width: $tablet-width) {
+        width: 160px !important;
+      }
+    }
+
+    div {
+      border-radius: 50%;
+    }
+  }
+
+
+  &__name {
+    margin-top: 15px;
+
+    span {
+      color: $clorTwo;
+      font-weight: 650;
+      font-size: 1.9rem;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-top: 10px;
+    }
+  }
+
+
+}

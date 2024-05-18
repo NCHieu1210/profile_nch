@@ -1,0 +1,155 @@
+@import "../../variable";
+
+.setMP__Banking {
+  padding: 0 10%;
+  // margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    // margin-bottom: 10px;
+  }
+
+
+  @media (max-width : 600px) {
+    // margin: 0;
+  }
+}
+
+.imageScanQR {
+  @include display-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-top: 50px;
+  animation: rubberBand;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+
+  /* don't forget to set a duration! */
+  & div:first-child {
+    padding-right: 77px;
+
+    @media (max-width: $tablet-width) {
+      padding-right: 0;
+    }
+
+  }
+
+  @media (max-width: $tablet-width) {
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+
+  &>div {
+
+    h2,
+    p {
+      font-size: 17px;
+      color: $clorOne;
+    }
+
+    svg {
+      font-size: 18px;
+
+    }
+  }
+
+  & img {
+    width: 15%;
+    border-radius: 25px;
+
+    @media (max-width: $tablet-width) {
+      width: 25%;
+    }
+  }
+
+}
+
+.ant-collapse {
+
+  // transition: 1s;
+  &-header-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &-item {
+
+    background-image: $clorOne;
+    opacity: 1;
+
+    &-active {
+      background-image: linear-gradient($clorOne, #ffffff);
+    }
+  }
+
+  &-item:nth-child(1) {
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+  }
+
+  &-item:nth-child(2) {
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s;
+    /* don't forget to set a duration! */
+  }
+
+  &-item:nth-child(3) {
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+  }
+
+}
+
+.box__imgBK {
+  @include display-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: backInLeft;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  /* don't forget to set a duration! */
+
+  //Image QR
+  img {
+    width: 30%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+
+    @media (max-width: $tablet-width) {
+      width: 90%;
+      border-radius: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  //END Image QR
+
+
+  //Button Dow and copy
+  &>div {
+    width: 30%;
+    @include display-flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $tablet-width) {
+      width: 90%;
+    }
+
+    & button {
+      color: $clorOne;
+    }
+  }
+
+  //END Button Dow and copy
+
+}

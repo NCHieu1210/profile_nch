@@ -1,0 +1,132 @@
+@import "../../_variable";
+
+.container {
+  min-height: 535px;
+  // min-height: 525px;
+
+  padding: $paddingDeafault;
+  padding-top: 50px;
+  background-image: linear-gradient(#ffffff, $clorOne);
+
+  @media (max-width: $tablet-width) {
+    min-height: 380px;
+    padding: 0;
+    padding-top: 40px;
+
+  }
+
+  &__body {
+    @include display-flex;
+    justify-content: space-around;
+
+
+    &:hover>:not(:hover) {
+      opacity: 0.5;
+      transition: all 500ms;
+      margin: 0 1%;
+      background-position: center center;
+
+      @media (max-width: $tablet-width) {
+        margin: 0 2%;
+      }
+    }
+
+    &--box {
+      height: 300px;
+      width: 19%;
+
+      @media (max-width: $tablet-width) {
+        width: 30%;
+      }
+
+
+      @media (max-width: $tablet-width) {
+        height: 200px;
+      }
+
+      &:hover {
+        width: 30%;
+        background-position: center center;
+
+        @media (max-width: $tablet-width) {
+          width: 41%;
+
+          @media (max-width: $tablet-width) {
+            width: 50%;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        background-image: url("../../../public/image/img1.jpg");
+        @include CImgBground;
+
+        animation: backInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s;
+        /* don't forget to set a duration! */
+
+        @media (max-width: $tablet-width) {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../../public/image/img2.jpg");
+        @include CImgBground;
+
+        animation: backInLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s;
+        /* don't forget to set a duration! */
+      }
+
+      &:nth-child(3) {
+        background-image: url("../../../public/image/img3.jpg");
+        @include CImgBground;
+
+        animation: backInDown;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s;
+        /* don't forget to set a duration! */
+      }
+
+      &:nth-child(4) {
+        background-image: url("../../../public/image/img4.jpg");
+        @include CImgBground;
+
+        animation: backInRight;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s;
+        /* don't forget to set a duration! */
+      }
+
+      &:nth-child(5) {
+        background-image: url("../../../public/image/img5.jpg");
+        @include CImgBground;
+
+        animation: backInRight;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s;
+
+        /* don't forget to set a duration! */
+        @media (max-width: $tablet-width) {
+          display: none;
+        }
+      }
+
+      &:nth-child(odd) {
+        transform: translateY(-30px);
+      }
+
+      &:nth-child(even) {
+        transform: translateY(30px);
+
+
+        @media (max-width: $tablet-width) {
+          transform: translateY(15px);
+        }
+      }
+    }
+  }
+}
