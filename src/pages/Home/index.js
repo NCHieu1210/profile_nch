@@ -65,11 +65,12 @@ const Home = () => {
           <div className="homePage__video">
             <video
               ref={videoRef}
-              src="/video/homeVideo.mp4"
               muted
-              playsInline
               loop
-            />
+              playsInline
+            >
+              <source src="/video/homeVideo.mp4" type="video/mp4"></source>
+            </video>
             <div className="homePage__video--skin" ></div>
           </div>
           : <div></div>}
