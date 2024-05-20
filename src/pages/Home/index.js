@@ -49,7 +49,7 @@ const Home = () => {
 
         {(wBrowser <= 480) ?
           <div className="homePage__video">
-            <video src='/video/homeVideo.mp4' type='mp4' alt='Home Video' loop autoPlay muted playsinline></video>
+            <video loop autoPlay muted playsinline src='/video/homeVideo.mp4' type='mp4' alt='Home Video' ></video>
             <div className="homePage__video--skin" ></div>
           </div>
           : <div></div>}
