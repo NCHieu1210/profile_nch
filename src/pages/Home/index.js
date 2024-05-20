@@ -36,22 +36,17 @@ const Home = () => {
   const wBrowser = document.body.scrollWidth;
   const videoRef = useRef(null);
 
+  //Tự động phát vide
   useEffect(() => {
-    const handlePlay = () => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    };
-
-    if (videoRef.current) {
-      videoRef.current.addEventListener('canplay', handlePlay);
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.muted = true; // Đảm bảo video bị tắt tiếng
+      videoElement.playsInline = true; // Đảm bảo video chơi trong chế độ inline
+      videoElement.autoplay = true; // Đảm bảo video tự động phát
+      videoElement.play().catch((error) => {
+        console.log('Autoplay was prevented:', error);
+      });
     }
-
-    return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener('canplay', handlePlay);
-      }
-    };
   }, []);
 
   return (
@@ -74,7 +69,6 @@ const Home = () => {
               muted
               playsInline
               loop
-              width="100%"
             />
             <div className="homePage__video--skin" ></div>
           </div>

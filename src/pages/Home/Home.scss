@@ -47,8 +47,11 @@
     animation-duration: 1.3s;
     width: 100%;
 
-    & img {
+    & video {
+      display: block;
       width: 100%;
+      max-width: 100%;
+      height: auto;
     }
 
     /* don't forget to set a duration! */
