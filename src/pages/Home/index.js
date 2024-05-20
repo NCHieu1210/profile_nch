@@ -2,7 +2,7 @@ import './Home.scss'
 import { ArrowDownOutlined, MehOutlined } from '@ant-design/icons';
 import 'animate.css';
 import IconMenuMobile from './IconMenuMobile';
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 
 const data = [{
@@ -34,20 +34,7 @@ const data = [{
 
 const Home = () => {
   const wBrowser = document.body.scrollWidth;
-  const videoRef = useRef(null);
 
-  //Tự động phát vide
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.muted = true; // Đảm bảo video bị tắt tiếng
-      videoElement.playsInline = true; // Đảm bảo video chơi trong chế độ inline
-      videoElement.autoplay = true; // Đảm bảo video tự động phát
-      videoElement.play().catch((error) => {
-        console.log('Autoplay was prevented:', error);
-      });
-    }
-  }, []);
 
   return (
     <>
@@ -62,16 +49,8 @@ const Home = () => {
         </div >
 
         {(wBrowser <= 480) ?
-          <div className="homePage__video">
-            <video
-              ref={videoRef}
-              muted
-              loop
-              playsInline
-            >
-              <source src="/video/homeVideo.mp4" type="video/mp4"></source>
-            </video>
-            <div className="homePage__video--skin" ></div>
+          <div className="homePage__img">
+            <img src="/image/homeImage.gif" alt="Animated GIF" />
           </div>
           : <div></div>}
 
