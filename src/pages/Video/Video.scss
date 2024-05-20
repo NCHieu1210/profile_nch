@@ -33,8 +33,14 @@
     div {
       width: 85%;
       transform: translateX(8.8%);
+
+      @media (max-width: $tablet-width) {
+        width: 80% !important;
+        transform: translateX(12%);
+      }
     }
   }
+
 
   & img {
     border-radius: 25px;
@@ -112,7 +118,7 @@ video {
 }
 
 //Box Thank for watching
-.boxVieo {
+.boxVideo {
   @include display-flex;
   display: flex;
   justify-content: center;

@@ -48,32 +48,11 @@ const Video = () => {
 
   ];
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Thực hiện hành động khi người dùng cuộn chuột
-  //     console.log('User is scrolling the page');
-
-  //     // Ví dụ: Cuộn xuống thêm 100 pixels khi người dùng cuộn
-  //     window.scrollBy({
-  //       top: 100,
-  //       behavior: 'smooth'
-  //     });
-  //   };
-
-  //   // Thêm event listener cho sự kiện cuộn
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Dọn dẹp event listener khi component unmount
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []); // Mảng rỗng để đảm bảo effect chỉ chạy một lần khi component mount
-
   return (
 
     <>
       <div className='setHeight'>
-        <div className="boxVieo">
+        <div className="boxVideo">
           <div>
             <h2> <MehOutlined /> Cảm ơn bạn!</h2>
             <p> Xem video vui vẻ nhé <ArrowDownOutlined /></p>

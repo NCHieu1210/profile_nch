@@ -1,0 +1,60 @@
+@import "../variable";
+
+.ant-modal {
+
+  //Header modal
+  &-title {
+    @include display-flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      margin-right: 10px
+    }
+  }
+
+  //END Header modal
+
+
+  //Body modal
+  &-body {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .groupButton {
+
+      span {
+        font-weight: 500;
+        color: $clorOne;
+
+      }
+
+      &>div {
+        @include display-flex;
+        justify-content: space-between;
+        margin-top: 7px;
+
+        &>.ant-btn {
+          min-width: 49%;
+        }
+      }
+
+      &>.ant-btn {
+        width: 100%;
+        margin-top: 7px;
+      }
+    }
+  }
+
+  &-footer {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //END Body modal
+
+}

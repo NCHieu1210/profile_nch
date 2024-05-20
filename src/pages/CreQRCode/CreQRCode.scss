@@ -1,0 +1,86 @@
+@import '../../variable';
+
+.createQR {
+  & #myqrcode {
+    padding-top: 25px;
+    @include display-flex;
+    justify-content: center;
+    width: 100%;
+
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+
+    & .ant-space-item:first-child {
+      width: 100%;
+    }
+
+    // & input {
+    //   width: 250px;
+    // }
+
+    & .ant-space-item:last-child>div {
+      @include display-flex;
+      justify-content: center;
+    }
+  }
+
+  .ant-upload-wrapper {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.3s;
+    /* don't forget to set a duration! */
+
+
+    & .ant-upload {
+      @include display-flex;
+      justify-content: center;
+      order: 2;
+      width: 100%;
+
+      & button {
+        width: 250px;
+        border-top: none;
+        // border-left: none;
+      }
+    }
+
+    & .ant-upload-list {
+      order: 1;
+      @include display-flex;
+      justify-content: center;
+
+      // width: 100
+      // margin-bottom: 10px;
+      & .ant-upload-list-item-container {
+        width: 250px;
+      }
+    }
+  }
+
+  & .btnD {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    animation: backInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.6s;
+    /* don't forget to set a duration! */
+
+    & button {
+      width: 60%;
+      background-color: $clorOne;
+      color: $clorTwo;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,5 +1,234 @@
+@import "../../variable";
+
 .homePage {
-  // padding: 0 10%;
-  width: 100%;
-  min-height: 100vh;
+
+  //Phần chữ và ảnh đầu body
+  &__content {
+    @include display-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px 50px 10px;
+    animation: rubberBand;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.9s;
+    /* don't forget to set a duration! */
+
+    & div:first-child {
+      padding-right: 77px;
+
+      @media (max-width: $tablet-width) {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    & img {
+      width: 15%;
+      border-radius: 20px;
+
+      @media (max-width: $tablet-width) {
+        width: 40%;
+      }
+    }
+
+    //END Phần chữ đầu body
+  }
+
+  //Video ở giữa trang
+  &__video {
+    position: relative;
+    animation: bounceInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.3s;
+    /* don't forget to set a duration! */
+
+    &--skin {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 888;
+    }
+  }
+
+  //ENDVideo ở giữa trang
+
+  //Phần cuối trang chủ
+  &__end {
+    width: 100%;
+    animation: bounceInUp;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s;
+    /* don't forget to set a duration! */
+  }
+
+  //END Phần cuối trang chủ
+
+  //Menu button ở giao diện mobile
+  &__buttonMobile {
+    @include display-flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 15px;
+    // margin-bottom: 20px;
+
+    &--switch {
+      position: absolute;
+    }
+
+    &--hide a {
+      display: none !important;
+    }
+
+    //Hiệu ứng Hide menu
+    &.homePage__buttonMobile--out {
+
+      & a:nth-child(1) {
+        animation: backOutLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.3s;
+        /* don't forget to set a duration! */
+      }
+
+      & a:nth-child(2) {
+        animation: backOutLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.1s;
+        /* don't forget to set a duration! */
+
+      }
+
+      & a:nth-child(3) {
+        animation: backOutLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.9s;
+        /* don't forget to set a duration! */
+      }
+
+      & a:nth-child(4) {
+        animation: backOutLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.7s;
+        /* don't forget to set a duration! */
+      }
+
+      & a:nth-child(5) {
+
+        animation: backOutLeft;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.5s;
+        /* don't forget to set a duration! */
+      }
+    }
+
+    //Hiệu ứng Hide menu
+
+    //Button show modal
+    & a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      margin: 0 20px;
+    }
+
+    & a:nth-child(1) {
+      margin: 0;
+
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.1s;
+      /* don't forget to set a duration! */
+
+      & img {
+        width: 32px;
+        border-radius: 50%;
+        padding: 1px;
+        -webkit-box-shadow: 0px 0px 77px 12px rgba(2, 128, 201, 1);
+        -moz-box-shadow: 0px 0px 77px 12px rgba(2, 128, 201, 1);
+        box-shadow: 0px 0px 77px 12px rgba(2, 128, 201, 1);
+
+      }
+    }
+
+    & a:nth-child(2) {
+      margin-top: 35px;
+
+
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.2s;
+      /* don't forget to set a duration! */
+
+      & img {
+        border-radius: 50%;
+        padding: 1px;
+        -webkit-box-shadow: 0px 0px 77px 12px rgba(24, 118, 242, 1);
+        -moz-box-shadow: 0px 0px 77px 12px rgba(24, 118, 242, 1);
+        box-shadow: 0px 0px 77px 12px rgba(24, 118, 242, 1);
+      }
+    }
+
+    & a:nth-child(3) {
+      margin-top: 50px;
+
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.3s;
+      /* don't forget to set a duration! */
+
+      & img {
+        border-radius: 50%;
+        padding: 1px;
+        -webkit-box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+      }
+
+    }
+
+    & a:nth-child(4) {
+      margin-top: 35px;
+
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.4s;
+      /* don't forget to set a duration! */
+
+      & img {
+        border-radius: 50%;
+        padding: 1px;
+        -webkit-box-shadow: 0px 0px 77px 12px rgba(255, 82, 128, 1);
+        -moz-box-shadow: 0px 0px 77px 12px rgba(255, 82, 128, 1);
+        box-shadow: 0px 0px 77px 12px rgba(255, 82, 128, 1);
+      }
+    }
+
+    & a:nth-child(5) {
+      margin: 0;
+
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 0.5s;
+      /* don't forget to set a duration! */
+
+      & img {
+        border-radius: 50%;
+        padding: 1px;
+        -webkit-box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 77px 12px rgba(0, 0, 0, 1);
+      }
+
+    }
+
+    //END Button show modal
+  }
+
+  //END Menu Link ở giao diện mobile
+
 }

@@ -20,13 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  padding-top: 50px;
+  padding: 50px 10px 50px 10px;
   animation: rubberBand;
   /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
-
   /* don't forget to set a duration! */
+
   & div:first-child {
     padding-right: 77px;
 
@@ -38,7 +37,7 @@
 
   @media (max-width: $tablet-width) {
     justify-content: space-around;
-    padding-top: 10px;
+    padding: 10px;
   }
 
   &>div {
@@ -51,7 +50,6 @@
 
     svg {
       font-size: 18px;
-
     }
   }
 
@@ -70,7 +68,7 @@
 
   // transition: 1s;
   &-header-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
   }
 

@@ -27,7 +27,7 @@ const LayoutDefault = () => {
                 <NavLink to="/video" className={navLinkActive}> <VideoCameraOutlined /> <span>Video</span></NavLink>
               </li>
               <li>
-                <NavLink to="/myqrcode" className={navLinkActive}> <QrcodeOutlined /> <span>QR Code</span></NavLink>
+                <NavLink to="/creqrcode" className={navLinkActive}> <QrcodeOutlined /> <span>QR Code</span></NavLink>
               </li>
             </ul>
           </div>

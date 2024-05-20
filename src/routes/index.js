@@ -4,7 +4,7 @@ import Error404 from "../pages/Error404";
 import Home from "../pages/Home";
 import Banking from "../pages/Banking";
 import Video from "../pages/Video";
-import MyQRCode from "../pages/MyQRCode";
+import CreQRCode from "../pages/CreQRCode";
 
 
 export const routes = [
@@ -24,8 +24,8 @@ export const routes = [
         element: <Video />
       },
       {
-        path: "myqrcode",
-        element: <MyQRCode />
+        path: "creqrcode",
+        element: <CreQRCode />
       },
       {
         path: "*",
