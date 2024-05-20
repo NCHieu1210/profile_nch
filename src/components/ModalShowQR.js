@@ -46,7 +46,7 @@ const ModalShowQR = (props) => {
               value={data.pathTo}
               icon="/image/avatar.jpg"
               size={250}
-              iconSize={50}
+              iconSize={70}
               bgColor="#fff"
             />
             <div className="groupButton">

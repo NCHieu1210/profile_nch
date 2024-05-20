@@ -45,12 +45,14 @@
     animation: bounceInUp;
     /* referring directly to the animation's @keyframe declaration */
     animation-duration: 1.3s;
+    width: 100%;
 
-    /* don't forget to set a duration! */
-    video {
-      object-fit: contain;
+    & img {
       width: 100%;
     }
+
+    /* don't forget to set a duration! */
+
 
     &--skin {
       width: 100%;

@@ -1,8 +1,8 @@
 import './Home.scss'
-import React from 'react';
 import { ArrowDownOutlined, MehOutlined } from '@ant-design/icons';
 import 'animate.css';
 import IconMenuMobile from './IconMenuMobile';
+import React, { useRef, useEffect } from 'react';
 
 
 const data = [{
@@ -34,6 +34,25 @@ const data = [{
 
 const Home = () => {
   const wBrowser = document.body.scrollWidth;
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const handlePlay = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+
+    if (videoRef.current) {
+      videoRef.current.addEventListener('canplay', handlePlay);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('canplay', handlePlay);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -49,7 +68,14 @@ const Home = () => {
 
         {(wBrowser <= 480) ?
           <div className="homePage__video">
-            <video loop autoPlay muted playsinline src='/video/homeVideo.mp4' type='mp4' alt='Home Video' ></video>
+            <video
+              ref={videoRef}
+              src="/video/homeVideo.mp4"
+              muted
+              playsInline
+              loop
+              width="100%"
+            />
             <div className="homePage__video--skin" ></div>
           </div>
           : <div></div>}

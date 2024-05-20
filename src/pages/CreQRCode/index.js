@@ -1,10 +1,10 @@
 import "./CreQRCode.scss";
 import React from 'react';
-import { Image, Input, QRCode, Space, Upload, Button } from 'antd';
+import { Input, QRCode, Space, Upload, Button } from 'antd';
 import { MehOutlined, ArrowDownOutlined } from '@ant-design/icons';
 import ButtonDowload from "../../components/ButtonDowload"
 import { UploadOutlined } from '@ant-design/icons';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 const CreQRCode = () => {
@@ -60,7 +60,7 @@ const CreQRCode = () => {
         <div id="myqrcode">
           <Space direction="vertical" align="center">
             <QRCode size={250} errorLevel="H" value={text || '-URL'} icon={getUrl} iconSize={70} bgColor="#fff" />
-            <label>Nhập URL của bạn:</label>
+            <label>Nhập URL của bạn</label>
 
             <Input
               placeholder="-"
