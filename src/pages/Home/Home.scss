@@ -61,6 +61,7 @@
   //Phần cuối trang chủ
   &__end {
     width: 100%;
+    min-height: 100px;
     animation: bounceInUp;
     /* referring directly to the animation's @keyframe declaration */
     animation-duration: 1.5s;

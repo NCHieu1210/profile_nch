@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 
 const CreQRCode = () => {
   //Mã QR
-  const [text, setText] = React.useState('https://www.google.com/');
+  const [text, setText] = React.useState('https://profile-nch.vercel.app/');
 
   //Ảnh của mã QR
   const [getUrl, setUrl] = useState("/image/avatar.jpg")

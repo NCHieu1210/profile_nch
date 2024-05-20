@@ -27,7 +27,7 @@ const data = [{
 },
 {
   name: 'Github',
-  srcImage: '/image/Github.png',
+  srcImage: '/image/github.png',
   pathTo: ''
 }
 ];
@@ -49,7 +49,7 @@ const Home = () => {
 
         {(wBrowser <= 480) ?
           <div className="homePage__video">
-            <video src='/video/homeVideo.mp4' type='mp4' alt='Home Video' loop autoPlay muted ></video>
+            <video src='/video/homeVideo.mp4' type='mp4' alt='Home Video' loop autoPlay muted playsinline></video>
             <div className="homePage__video--skin" ></div>
           </div>
           : <div></div>}
